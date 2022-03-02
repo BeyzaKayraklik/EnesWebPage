@@ -1,27 +1,33 @@
-﻿
+﻿@{
+    var b = (List<DataBaseEntity.DAO.SliderTblDAO>)ViewData["slider"];
+
+}
 
 
 
-<div class="cover-v1 jarallax" style="background-image: url('images/cover_bg_2.jpg');" id="home-section">
-    <div class="container">
-        <div class="row align-items-center">
+@foreach (var slider in b)
+{
+    <div class="cover-v1 jarallax" style="background-image: url('@slider.Slider_Image');" id="home-section">
+        <div class="container">
+            <div class="row align-items-center">
 
-            <div class="col-md-7 mx-auto text-center">
-                <h1 class="heading gsap-reveal-hero"> Enes Top </h1>
-                <h2 class="subheading gsap-reveal-hero">
-                    Profesyonel Fotoğrafçı ve Gezgin
-                </h2>
+                <div class="col-md-7 mx-auto text-center">
+                    <h1 class="heading gsap-reveal-hero"> @slider.Slider_Title </h1>
+                    <h2 class="subheading gsap-reveal-hero">
+                        @slider.Slider_Content
+                    </h2>
+                </div>
+
             </div>
-
         </div>
+
+
+        <a href="#portfolio-section" class="mouse-wrap smoothscroll">
+            <span class="mouse">
+                <span class="scroll"></span>
+            </span>
+            <span class="mouse-label">Daha Fazlası..</span>
+        </a>
+
     </div>
-
-
-    <a href="#portfolio-section" class="mouse-wrap smoothscroll">
-        <span class="mouse">
-            <span class="scroll"></span>
-        </span>
-        <span class="mouse-label">Daha Fazlası..</span>
-    </a>
-
-</div>
+}

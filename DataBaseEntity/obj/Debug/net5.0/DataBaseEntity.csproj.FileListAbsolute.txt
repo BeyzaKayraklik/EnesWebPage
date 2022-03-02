@@ -1,0 +1,15 @@
+C:\Users\Beyza\source\repos\Unfold\DataBaseEntity\bin\Debug\net5.0\DataBaseEntity.deps.json
+C:\Users\Beyza\source\repos\Unfold\DataBaseEntity\bin\Debug\net5.0\DataBaseEntity.runtimeconfig.json
+C:\Users\Beyza\source\repos\Unfold\DataBaseEntity\bin\Debug\net5.0\DataBaseEntity.runtimeconfig.dev.json
+C:\Users\Beyza\source\repos\Unfold\DataBaseEntity\bin\Debug\net5.0\DataBaseEntity.dll
+C:\Users\Beyza\source\repos\Unfold\DataBaseEntity\bin\Debug\net5.0\ref\DataBaseEntity.dll
+C:\Users\Beyza\source\repos\Unfold\DataBaseEntity\bin\Debug\net5.0\DataBaseEntity.pdb
+C:\Users\Beyza\source\repos\Unfold\DataBaseEntity\obj\Debug\net5.0\DataBaseEntity.csproj.AssemblyReference.cache
+C:\Users\Beyza\source\repos\Unfold\DataBaseEntity\obj\Debug\net5.0\DataBaseEntity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Beyza\source\repos\Unfold\DataBaseEntity\obj\Debug\net5.0\DataBaseEntity.AssemblyInfoInputs.cache
+C:\Users\Beyza\source\repos\Unfold\DataBaseEntity\obj\Debug\net5.0\DataBaseEntity.AssemblyInfo.cs
+C:\Users\Beyza\source\repos\Unfold\DataBaseEntity\obj\Debug\net5.0\DataBaseEntity.csproj.CoreCompileInputs.cache
+C:\Users\Beyza\source\repos\Unfold\DataBaseEntity\obj\Debug\net5.0\DataBaseEntity.dll
+C:\Users\Beyza\source\repos\Unfold\DataBaseEntity\obj\Debug\net5.0\ref\DataBaseEntity.dll
+C:\Users\Beyza\source\repos\Unfold\DataBaseEntity\obj\Debug\net5.0\DataBaseEntity.pdb
+C:\Users\Beyza\source\repos\Unfold\DataBaseEntity\obj\Debug\net5.0\DataBaseEntity.genruntimeconfig.cache

@@ -1,4 +1,13 @@
-﻿
+﻿@{
+    // var a = (List<DataBaseEntity.Transaction.CategoriesTbl>)ViewData["categories"];
+    // var a = new DataBaseEntity.Transaction.CategoriesTbl().DataSource() ;
+        var a = (List<DataBaseEntity.DAO.CategoriesTblDAO>)ViewData["categories"];
+   
+}
+
+
+
+
 <div class="unslate_co--section" id="journal-section">
     <div class="container">
         <div class="section-heading-wrap text-center mb-5">
@@ -8,20 +17,28 @@
 
 
         <div class="row gutter-v4 align-items-stretch">
-            <div class="col-sm-6 col-md-6 col-lg-8 blog-post-entry" data-aos="fade-up" data-aos-delay="0">
+            @foreach (var categori in a)
+            {
+                <div class="col-sm-6 col-md-6 col-lg-4 blog-post-entry" data-aos="fade-up" data-aos-delay="100">
 
-                <a href="blog-single.html" class="grid-item blog-item w-100 h-100">
-                    <div class="overlay">
-                        <div class="portfolio-item-content">
-                            <h3>Doğa Fotoğrafçılığı</h3>
-                            <p class="post-meta">Enes Top <span class="small">&bullet;</span> </p>
+                    <a href="/CategoriesDetail/Index/@categori.Categories_ID" class="grid-item blog-item w-100 h-100">
+
+                        <div class="overlay">
+                            <div class="portfolio-item-content">
+                                <h3>@categori.Categories_Title</h3>
+                                <p class="post-meta">@categori.Categories_Content <span class="small">&bullet;</span> </p>
+                            </div>
                         </div>
-                    </div>
-                    <img src="~/unfold-master/images/post_1.jpg" class="lazyload" alt="Image" />
-                </a>
+                        //@categori.Categories_Image
+                        <img src="@categori.Categories_Image" class="lazyload" alt="Image" />
+                    </a>
+
+                </div>
+            }
+        </div>
 
 
-            </div>
+        @*
             <div class="col-sm-6 col-md-6 col-lg-4 blog-post-entry" data-aos="fade-up" data-aos-delay="100">
                 <a href="blog-single.html" class="grid-item blog-item w-100 h-100">
                     <div class="overlay">
@@ -59,22 +76,22 @@
                     </div>
                     <img src="~/unfold-master/images/post_4.jpg" class="lazyload" alt="Image" />
                 </a>
-            </div>
+            </div>*@
 
-            @*<div class="col-sm-6 col-md-6 col-lg-4 blog-post-entry" data-aos="fade-up" data-aos-delay="200">
-                    <a href="blog-single.html" class="grid-item blog-item w-100 h-100">
-                        <div class="overlay">
-                            <div class="portfolio-item-content">
-                                <h3>A Mounteering Guide For Beginners</h3>
-                                <p class="post-meta">By Joefrey <span class="small">&bullet;</span> 5 mins read</p>
-                            </div>
+        @*<div class="col-sm-6 col-md-6 col-lg-4 blog-post-entry" data-aos="fade-up" data-aos-delay="200">
+                <a href="blog-single.html" class="grid-item blog-item w-100 h-100">
+                    <div class="overlay">
+                        <div class="portfolio-item-content">
+                            <h3>A Mounteering Guide For Beginners</h3>
+                            <p class="post-meta">By Joefrey <span class="small">&bullet;</span> 5 mins read</p>
                         </div>
-                        <img src="~/unfold-master/images/post_5.jpg" class="lazyload" alt="Image" />
-                    </a>
-                </div>*@
+                    </div>
+                    <img src="~/unfold-master/images/post_5.jpg" class="lazyload" alt="Image" />
+                </a>
+            </div>*@
 
-
-        </div>
 
     </div>
+
+
 </div>

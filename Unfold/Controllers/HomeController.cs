@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DataBaseEntity.Transaction;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,36 @@ namespace Unfold.Controllers
 
         public IActionResult Index()
         {
+            CategoriesTbl categories = new CategoriesTbl();
+
+            var c = categories.DataSource();
+
+            ViewData["categories"] = c;
+
+
+            ProjectTbl project = new ProjectTbl();
+
+            var a = project.DataSource();
+
+            ViewData["project"] = a;
+
+
+            SliderTbl slider = new SliderTbl();
+
+            var b = slider.DataSource();
+
+            ViewData["slider"] = b;
+
+
+           AboutTbl about = new AboutTbl();
+
+            var d = about.DataSource();
+
+            ViewData["about"] = d;
+
+
+
+
             return View();
         }
 

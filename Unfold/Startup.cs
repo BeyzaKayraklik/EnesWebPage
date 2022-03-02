@@ -23,6 +23,8 @@ namespace Unfold
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            DataBaseEntity.DbOperations.CS = Configuration.GetConnectionString("EnesDb");
+
             services.AddControllersWithViews();
         }
 
@@ -46,11 +48,24 @@ namespace Unfold
 
             app.UseAuthorization();
 
+          
+
             app.UseEndpoints(endpoints =>
             {
+               
+
+
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+                endpoints.MapControllerRoute(
+                    name: "admin",
+
+                    pattern: "{area}/{controller=Home}/{action=Index}/{id?}"
+                  // defaults: new { controller = "Admin", action = "Index" }
+                );
+
             });
         }
     }

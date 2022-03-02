@@ -1,0 +1,51 @@
+﻿@{
+    var a = (List<DataBaseEntity.DAO.PortfolioTblDAO>)ViewData["categories"];
+}
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<br />
+<br />
+<br />
+<br />
+
+<div class="unslate_co--section" id="portfolio-section">
+    <div class="container">
+
+
+        <div class="relative"><div class="loader-portfolio-wrap"><div class="loader-portfolio"></div></div> </div>
+        <div id="portfolio-single-holder"></div>
+
+        <div class="portfolio-wrapper">
+
+            @foreach (var project in a)
+            {
+
+                <div id="posts" class="row gutter-isotope-item">
+                    <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
+                        <a href="/Project/Index/@project.Portfolio_ID" class="portfolio-item ajax-load-page isotope-item gsap-reveal-img" data-id="1">
+                            <div class="overlay">
+                                <span class="wrap-icon icon-link2"></span>
+                                <div class="portfolio-item-content">
+                                    <h3> @project.Portfolio_Title </h3>
+                                    <p> @project.Portfolio_Content </p>
+                                </div>
+                            </div>
+                            <img src="@project.Portfolio_Image" class="lazyload  img-fluid" alt="Images" />
+                        </a>
+                    </div>
+
+
+
+                </div>
+            }
+            </div>
+
+
+    </div>
+</div>
+

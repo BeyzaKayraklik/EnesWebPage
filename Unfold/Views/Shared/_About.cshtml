@@ -1,27 +1,35 @@
-﻿
+﻿@{
+    var b = (List<DataBaseEntity.DAO.AboutTblDAO>)ViewData["about"];
+
+
+}
+
 <div class="unslate_co--section" id="about-section">
-    <div class="container">
+    @foreach (var about in b)
+    {
+        <div class="container">
 
-        <div class="section-heading-wrap text-center mb-5">
-            <h2 class="heading-h2 text-center divider"><span class="gsap-reveal"> Hakkımda </span></h2>
-            <span class="gsap-reveal">
-               @*<img src="~/unfold-master/images/divider.png" alt="divider" width="76">*@
-            </span>
-        </div>
-
-
-        <div class="row mt-5 justify-content-between">
-            <div class="col-lg-7 mb-5 mb-lg-0">
-                <figure class="dotted-bg gsap-reveal-img ">
-                    <img src="~/unfold-master/images/about_me_pic2.jpg" alt="Image" class="img-fluid">
-                </figure>
+            <div class="section-heading-wrap text-center mb-5">
+                <h2 class="heading-h2 text-center divider"><span class="gsap-reveal"> @about.About_Title </span></h2>
+                <span class="gsap-reveal">
+                    @*<img src="~/unfold-master/images/divider.png" alt="divider" width="76">*@
+                </span>
             </div>
-            <div class="col-lg-4 pr-lg-5">
-                <h3 class="mb-4 heading-h3"><span class="gsap-reveal">Enes TOP </span></h3>
-                <p class="lead gsap-reveal">Türkiye’de Cumhuriyet döneminde hak ettiği değeri bulmaya başlayan fotoğraf sanatı, Batı tekniklerinin ve teknolojisinin kullanılmasıyla önce basında sonra ise sokakta kendine yer bulmuştur. <a href="#">İletişime  </a> geçebilirsiniz. </p>
-                <p class="mb-4 gsap-reveal"> Fotoğraf sanatçıları stüdyolarından dışarı çıkarak; yaşamı, insanı ve doğayı görüntülemeye başlamıştır.</p>
-                <p class="gsap-reveal"><a href="#" class="btn btn-outline-pill btn-custom-light"> Hakkımda </a></p>
+
+
+            <div class="row mt-5 justify-content-between">
+                <div class="col-lg-7 mb-5 mb-lg-0">
+                    <figure class="dotted-bg gsap-reveal-img ">
+                        <img src="@about.About_Image" alt="Image" class="img-fluid">
+                    </figure>
+                </div>
+                <div class="col-lg-4 pr-lg-5">
+                    <h3 class="mb-4 heading-h3"><span class="gsap-reveal">Enes TOP  </span></h3>
+                    <p class="lead gsap-reveal">@about.About_Content <a href="#">İletişime  </a> geçebilirsiniz. </p>
+                    <p class="mb-4 gsap-reveal"> Fotoğraf sanatçıları stüdyolarından dışarı çıkarak; yaşamı, insanı ve doğayı görüntülemeye başlamıştır.</p>
+                    <p class="gsap-reveal"><a href="#" class="btn btn-outline-pill btn-custom-light"> Hakkımda </a></p>
+                </div>
             </div>
         </div>
+    }
     </div>
-</div>
