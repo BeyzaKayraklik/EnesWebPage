@@ -49,6 +49,25 @@ namespace Unfold.Controllers
             ViewData["about"] = d;
 
 
+            ServicesTbl services = new ServicesTbl();
+
+            var e = services.DataSource();
+
+            ViewData["services"] = e;
+
+
+            SkillsTbl skills = new SkillsTbl();
+
+            var f = skills.DataSource();
+
+            ViewData["skills"] = f;
+
+
+            ContactTbl contact = new ContactTbl();
+
+            var g = contact.DataSource();
+
+            ViewData["contact"] = g;
 
 
             return View();

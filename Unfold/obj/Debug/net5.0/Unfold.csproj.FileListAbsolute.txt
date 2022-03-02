@@ -120,7 +120,6 @@ C:\Users\Beyza\source\repos\Unfold\Unfold\obj\Debug\net5.0\Razor\Views\Shared\_A
 C:\Users\Beyza\source\repos\Unfold\Unfold\obj\Debug\net5.0\Razor\Views\Shared\_Services.cshtml.g.cs
 C:\Users\Beyza\source\repos\Unfold\Unfold\obj\Debug\net5.0\Razor\Views\Shared\_Skills.cshtml.g.cs
 C:\Users\Beyza\source\repos\Unfold\Unfold\obj\Debug\net5.0\Razor\Views\Shared\_Categories.cshtml.g.cs
-C:\Users\Beyza\source\repos\Unfold\Unfold\obj\Debug\net5.0\Razor\Views\Shared\_Contact.cshtml.g.cs
 C:\Users\Beyza\source\repos\Unfold\Unfold\obj\Debug\net5.0\Razor\Views\Shared\_AdminLayout.cshtml.g.cs
 C:\Users\Beyza\source\repos\Unfold\Unfold\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Antiforgery.dll
 C:\Users\Beyza\source\repos\Unfold\Unfold\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Authentication.Abstractions.dll

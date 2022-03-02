@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@{
+    var b = (List<DataBaseEntity.DAO.ContactTblDAO>)ViewData["contact"];
+}
+
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Unfold &mdash; A onepage portfolio HTML template by Colorlib</title>
@@ -20,7 +25,7 @@
     <!-- Theme Style -->
     <link rel="stylesheet" href="~/unfold-master/css/style.css">
 
-    
+
 </head>
 <body>
 
@@ -114,7 +119,7 @@
                             @*<span class="gsap-reveal"><img src="~/unfold-master/images/divider.png" alt="divider" width="76"></span>*@
                         </div>
 
-
+                        
                         <div class="row justify-content-between">
 
                             <div class="col-md-6">
@@ -147,26 +152,28 @@
                                 </div>
 
                             </div>
-
-                            <div class="col-md-4">
-                                <div class="contact-info-v1">
-                                    <div class="gsap-reveal d-block">
-                                        <span class="d-block contact-info-label">Email</span>
-                                        <a href="#" class="contact-info-val">enes@top.com</a>
-                                    </div>
-                                    <div class="gsap-reveal d-block">
-                                        <span class="d-block contact-info-label">Telefon</span>
-                                        <a href="#" class="contact-info-val">+90 345 6789 012</a>
-                                    </div>
-                                    <div class="gsap-reveal d-block">
-                                        <span class="d-block contact-info-label">Adres</span>
-                                        <address class="contact-info-val">Selçuklu <br> Konya,Posta Kodu</address>
+                            @foreach (var contact in b)
+                            {
+                                <div class="col-md-4">
+                                    <div class="contact-info-v1">
+                                        <div class="gsap-reveal d-block">
+                                            <span class="d-block contact-info-label">Email</span>
+                                            <a href="#" class="contact-info-val">@contact.Contact_Mail</a>
+                                        </div>
+                                        <div class="gsap-reveal d-block">
+                                            <span class="d-block contact-info-label">Telefon</span>
+                                            <a href="#" class="contact-info-val">@contact.Contact_Phone</a>
+                                        </div>
+                                        <div class="gsap-reveal d-block">
+                                            <span class="d-block contact-info-label">Adres</span>
+                                            <address class="contact-info-val">@contact.Contact_Address</address>
+                                        </div>
                                     </div>
                                 </div>
+                            }
                             </div>
-
+                        
                         </div>
-                    </div>
                 </div>
 
 

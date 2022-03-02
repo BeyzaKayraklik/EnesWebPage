@@ -1,4 +1,6 @@
-﻿
+﻿@{
+    var b = (List<DataBaseEntity.DAO.ServicesTblDAO>)ViewData["services"];
+}
 <div class="unslate_co--section" id="services-section">
     <div class="container">
 
@@ -8,62 +10,23 @@
         </div>
 
         <div class="row gutter-v3">
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="feature-v1" data-aos="fade-up" data-aos-delay="0">
-                    <div class="wrap-icon mb-3">
-                        <img src="~/unfold-master/images/svg/001-options.svg" alt="Image" width="45">
-                    </div>
-                    <h3> Doğa <br> Fotoğrafçılığı </h3>
-                    <p> Bu kuşağın önemli sanatçıları Türkiye’nin en iyi fotoğrafçıları olarak günümüze de ışık olmuştur </p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="feature-v1" data-aos="fade-up" data-aos-delay="100">
-                    <div class="wrap-icon mb-3">
-                        <img src="~/unfold-master/images/svg/002-chat.svg" alt="Icon" width="45">
-                    </div>
-                    <h3>Makine <br> Fotoğrafçılığı </h3>
-                    <p>Bu kuşağın önemli sanatçıları Türkiye’nin en iyi fotoğrafçıları olarak günümüze de ışık olmuştur</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="feature-v1" data-aos="fade-up" data-aos-delay="200">
-                    <div class="wrap-icon mb-3">
-                        <img src="~/unfold-master/images/svg/003-contact-book.svg" alt="Image" class="img-fluid" width="45">
-                    </div>
-                    <h3>Bina <br> Fotoğrafçılığı</h3>
-                    <p>Bu kuşağın önemli sanatçıları Türkiye’nin en iyi fotoğrafçıları olarak günümüze de ışık olmuştur </p>
-                </div>
-            </div>
 
-            @*<div class="col-md-6 col-lg-4 mb-4">
+            @foreach (var services in b)
+            {
+                <div class="col-md-6 col-lg-4 mb-4">
                     <div class="feature-v1" data-aos="fade-up" data-aos-delay="0">
                         <div class="wrap-icon mb-3">
-                            <img src="~/unfold-master/images/svg/004-percentage.svg" alt="Image" width="45">
+                            <img src="~/unfold-master/images/svg/001-options.svg" alt="Image" width="45">
                         </div>
-                        <h3>Hayvan  <br> Fotoğrafçılığı</h3>
-                        <p>Bu kuşağın önemli sanatçıları Türkiye’nin en iyi fotoğrafçıları olarak günümüze de ışık olmuştur </p>
-                    </div>
-                </div>*@
-            @*<div class="col-md-6 col-lg-4 mb-4">
-                    <div class="feature-v1" data-aos="fade-up" data-aos-delay="100">
-                        <div class="wrap-icon mb-3">
-                            <img src="~/unfold-master/images/svg/006-goal.svg" alt="Image" width="45">
-                        </div>
-                        <h3>WordPress <br> Solutions</h3>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. </p>
+                        <h3> @services.Services_Title </h3>
+                        <br/>
+                        <p> @services.Services_Content </p>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="feature-v1" data-aos="fade-up" data-aos-delay="200">
-                        <div class="wrap-icon mb-3">
-                            <img src="~/unfold-master/images/svg/005-line-chart.svg" alt="Image" width="45">
-                        </div>
-                        <h3>Mobile <br> Applications</h3>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. </p>
-                    </div>
-                </div>*@
+            }
 
-        </div>
+
+
+            </div>
     </div>
 </div>

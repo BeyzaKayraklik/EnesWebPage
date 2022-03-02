@@ -1,4 +1,6 @@
-﻿
+﻿@{
+    var b = (List<DataBaseEntity.DAO.SkillsTblDAO>)ViewData["skills"];
+}
 
 <div class="unslate_co--section section-counter" id="skills-section">
     <div class="container">
@@ -9,42 +11,20 @@
 
 
         <div class="row pt-5">
-            <div class="col-6 col-sm-6 mb-5 mb-lg-0 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
-                <div class="counter-v1 text-center">
-                    <span class="number-wrap">
-                        <span class="number number-counter" data-number="90">0</span>
-                        <span class="append-text">%</span>
-                    </span>
-                    <span class="counter-label">Adobe Photoshop</span>
+            @foreach (var skills in b)
+            {
+                <div class="col-6 col-sm-6 mb-5 mb-lg-0 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+                    <div class="counter-v1 text-center">
+                        <span class="number-wrap">
+                            <span class="number number-counter" data-number="@skills.Skills_Percent">0</span>
+                            <span class="append-text">%</span>
+                        </span>
+                        <span class="counter-label">@skills.Skills_Title</span>
+                    </div>
                 </div>
+            }
+                
+
             </div>
-            <div class="col-6 col-sm-6 mb-5 mb-lg-0 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-                <div class="counter-v1 text-center">
-                    <span class="number-wrap">
-                        <span class="number number-counter" data-number="99">0</span>
-                        <span class="append-text">%</span>
-                    </span>
-                    <span class="counter-label">Adobe Illustratıon</span>
-                </div>
-            </div>
-            <div class="col-6 col-sm-6 mb-5 mb-lg-0 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-                <div class="counter-v1 text-center">
-                    <span class="number-wrap">
-                        <span class="number number-counter" data-number="95">0</span>
-                        <span class="append-text">%</span>
-                    </span>
-                    <span class="counter-label"> Çekim </span>
-                </div>
-            </div>
-            <div class="col-6 col-sm-6 mb-5 mb-lg-0 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-                <div class="counter-v1 text-center">
-                    <span class="number-wrap">
-                        <span class="number number-counter" data-number="100">0</span>
-                        <span class="append-text">%</span>
-                    </span>
-                    <span class="counter-label">Düzenleme </span>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
